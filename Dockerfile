@@ -1,21 +1,23 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into the container
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
+# Upgrade pip to the latest version
+RUN pip install --upgrade pip
+
+# Install main dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 8501 available to the world outside this container
+# Install crewai and langchain-openai separately to resolve conflicts
+RUN pip install --no-cache-dir -r crewai_requirements.txt
+
+# Expose Streamlit's default port
 EXPOSE 8501
 
-# Define environment variable
-ENV STREAMLIT_SERVER_PORT=8501
-ENV STREAMLIT_SERVER_HEADLESS=true
-
-# Run streamlit app when the container launches
+# Run the Streamlit app when the container launches
 CMD ["streamlit", "run", "app.py"]

@@ -38,7 +38,6 @@ colorama==0.4.6
 coloredlogs==15.0.1
 contextlib2==21.6.0
 crashtest==0.4.1
-crewai==0.28.8
 crewai-tools==0.1.6
 cryptography==43.0.1
 dalle3==0.1.0
@@ -128,7 +127,6 @@ langchain-cohere==0.1.5
 langchain-community==0.0.29
 langchain-core==0.1.52
 langchain-experimental==0.0.55
-langchain-openai==0.1.7
 langchain-text-splitters==0.0.2
 langsmith==0.1.125
 loguru==0.7.2
@@ -276,10 +274,6 @@ stack-data==0.6.3
 starlette==0.38.5
 streamlit==1.38.0
 stripe==10.12.0
-swarm-models==0.1.0
-swarms==5.6.6
-swarms-cloud==0.3.7
-swarms-memory==0.1.2
 sympy==1.13.3
 tabulate==0.9.0
 tenacity==8.5.0
@@ -316,7 +310,7 @@ urllib3==2.2.3
 uvicorn==0.30.6
 uvloop==0.20.0
 virtualenv==20.26.5
-watchdog==5.0.2
+watchdog
 watchfiles==0.24.0
 wcwidth==0.2.13
 websocket-client==1.8.0
